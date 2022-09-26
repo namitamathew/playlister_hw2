@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css?family=Tangerine');
 :root {
   /* 
         FIRST WE'LL DEFINE OUR SWATCHES, i.e. THE COMPLEMENTARY
@@ -19,7 +20,7 @@ body {
 
 #root {
   background-color: var(--swatch-primary);
-  font-family: serif;
+  font-family: 'Tangerine';
   position: absolute;
   width: 80%;
   left: 10%;
@@ -109,7 +110,7 @@ body {
 }
 
 .list-card, .selected-list-card, .unselected-list-card {
-  font-size: 18pt;
+  font-size: 28pt;
   margin: 10px;
   padding: 20px;
   border-radius: 25px;
@@ -153,11 +154,29 @@ body {
   cursor: not-allowed;
 }
 
-.playlister-song, .playlister-song-dragged-to { 
+.playlister-song, .playlister-song-hover, .playlister-song-dragged-to { 
   display:flex;
   align-items: center;
-  font-size: 24pt;
-  height:20%;
+  font-size: 28pt;
+  margin: 10px;
+  padding: 20px;
+  border-radius: 25px;
+}
+
+.playlister-song {
+  background-color: var(--swatch-complement);
+}
+
+
+.playlister-song-hover, .playlister-song-dragged-to {
+  background-color: var(--swatch-contrast);
+  color:white;
+
+}
+
+.song-card-button {
+  float:right;
+  font-size:24pt;
 }
 
 input {
@@ -191,8 +210,8 @@ input {
 
 .modal-root {
   position: relative;
-  max-width: 1200vw;
-  max-height: 600vh;
+  max-width: 70vw;
+  max-height: 60vh;
   overflow: visible;
   display: flex;
   flex-direction: column;
@@ -209,7 +228,7 @@ input {
 }
 
 .modal-north {
-  font-size:32pt;
+  font-size:24pt;
   font-weight: bold;
   background-color: #669966;
   color:white;
@@ -220,7 +239,7 @@ input {
   grid-template-columns: 30% 65%;
   grid-template-rows: 33% 33% 33%;
   gap: 10px 20px;
-  font-size: 48pt;
+  font-size: 24pt;
 }
 
 span {
