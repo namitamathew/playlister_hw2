@@ -78,6 +78,12 @@ export default class SongCard extends React.Component {
 
     }
 
+    handleEditSong = (event) => {
+        let song = this.props;
+        event.preventDefault();
+        this.props.editCallback(song);
+    }
+
 
     getItemNum = () => {
         return this.props.id.substring("playlist-song-".length);
@@ -105,6 +111,7 @@ export default class SongCard extends React.Component {
                 onDrop={this.handleDrop}
                 onMouseEnter={this.handleHoverStart}
                 onMouseLeave={this.handleHoverEnd}
+                onDoubleClick={this.handleEditSong}
                 draggable="true"
             >
                 {num}.&nbsp;<a href={"https://youtu.be/"+ song.youTubeId}> {song.title} by {song.artist}</a>
@@ -127,6 +134,7 @@ export default class SongCard extends React.Component {
                 onDrop={this.handleDrop}
                 onMouseEnter={this.handleHoverStart}
                 onMouseLeave={this.handleHoverEnd}
+                onDoubleClick={this.handleEditSong}
                 draggable="true"
             >
                 {num}.&nbsp;<a href={"https://youtu.be/" + song.youTubeId}> {song.title} by {song.artist}</a>
