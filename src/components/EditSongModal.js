@@ -8,7 +8,7 @@ export default class EditSongModal extends Component {
                 class="modal" 
                 id="edit-song-modal" 
                 data-animation="slideInOutLeft">
-                    <div class="modal-root" id='verify-delete-list-root'>
+                    <div class="modal-root" id='verify-edit-song-root'>
                         <div class="modal-north">
                             Edit Song
                         </div>
