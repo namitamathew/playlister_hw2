@@ -269,6 +269,17 @@ class App extends React.Component {
             this.db.mutationUpdateList(this.state.currentList);
         }
     }
+
+    addSong = () => {
+        let newSong = {"title": "Untitled", "artist": "Unknown", "youTubeId": "dQw4w9WgXcQ"};
+        let list = this.state.currentList;
+        console.log(list.songs);
+        list.songs.push(newSong);
+        this.setStateWithUpdatedList(list);
+        console.log(list.songs)
+
+    }
+
     markListForDeletion = (keyPair) => {
         this.setState(prevState => ({
             currentList: prevState.currentList,
@@ -371,7 +382,7 @@ class App extends React.Component {
     deleteSong = (num) => {
         // IF IT IS THE CURRENT LIST, CHANGE THAT
         let list = this.state.currentList;
-        list.splice(num-1, 1);
+        list.songs.splice(num-1, 1);
         this.setStateWithUpdatedList(list);
 
     }
@@ -399,6 +410,7 @@ class App extends React.Component {
                     canUndo={canUndo}
                     canRedo={canRedo}
                     canClose={canClose} 
+                    addSongCallback={this.addSong}
                     undoCallback={this.undo}
                     redoCallback={this.redo}
                     closeCallback={this.closeCurrentList}
