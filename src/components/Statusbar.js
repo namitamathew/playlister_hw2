@@ -7,6 +7,9 @@ export default class Statusbar extends React.Component {
         if (currentList) {
             name = currentList.name;
         }
+
+        //loadToolbar();
+
         return (
             <div id="playlister-statusbar">
                 {name}

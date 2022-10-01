@@ -63,7 +63,7 @@ export default class SongCard extends React.Component {
             draggedTo: prevState.draggedTo,
             hover: true
         }))
-        console.log("hover")
+        //console.log("hover")
 
     }
 
@@ -74,7 +74,7 @@ export default class SongCard extends React.Component {
             draggedTo: prevState.draggedTo,
             hover: false
         }))
-        console.log("hoverStop")
+        //console.log("hoverStop")
 
     }
 
@@ -100,7 +100,7 @@ export default class SongCard extends React.Component {
         const { song } = this.props;
 
         let num = this.getItemNum();
-        console.log("num: " + num);
+        //console.log("num: " + num);
         let itemClass = "playlister-song";
         if (this.state.hover) {
             itemClass = "playlister-song-hover";
