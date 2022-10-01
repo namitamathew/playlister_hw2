@@ -175,7 +175,7 @@ body {
 }
 
 .song-card-button {
-  float:right;
+  align-self: flex-end;
   font-size:24pt;
 }
 
@@ -279,6 +279,7 @@ span {
 }
 
 #edit-song-modal-title-textfield {
+  width: 15vw;
   grid-column: 2 / 3;
   grid-row: 1 / 2;
 }
@@ -289,6 +290,7 @@ span {
 }
 
 #edit-song-modal-artist-textfield {
+  width: 15vw;
   grid-column: 2 / 3;
   grid-row: 2 / 3;
 }
@@ -299,6 +301,7 @@ span {
 }
 
 #edit-song-modal-youTubeId-textfield {
+  width: 15vw;
   grid-column: 2 / 3;
   grid-row: 3 / 4;
 }

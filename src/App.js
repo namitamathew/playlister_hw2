@@ -211,7 +211,6 @@ class App extends React.Component {
     // THIS FUNCTION BEGINS THE PROCESS OF LOADING A LIST FOR EDITING
     loadList = (key) => {
         let newCurrentList = this.db.queryGetList(key);
-        console.log(newCurrentList);
         this.setState(prevState => ({
             listKeyPairMarkedForDeletion : prevState.listKeyPairMarkedForDeletion,
             currentList: newCurrentList,
@@ -223,7 +222,6 @@ class App extends React.Component {
             // AN AFTER EFFECT IS THAT WE NEED TO MAKE SURE
             // THE TRANSACTION STACK IS CLEARED
             this.tps.clearAllTransactions();
-            console.log(this.state.currentList)
             this.refreshToolbars();
         });
         
@@ -345,7 +343,6 @@ class App extends React.Component {
         let addSong = document.getElementById("add-song-button")
         let close = document.getElementById("close-button")
         let addList = document.getElementById("add-list-button")
-        console.log(this.state.currentList)
         if (this.state.currentList != null) {
             close.classList.remove("disabled");
             close.disabled = false;
@@ -571,7 +568,6 @@ class App extends React.Component {
         
         let num = this.state.deleteSong.id.substring("playlist-song-".length);
         let cSong = this.state.deleteSong.song;
-        console.log(cSong);
         this.addRemoveSongTransaction(num, cSong.title, cSong.artist, cSong.youTubeID);
         this.hideDeleteSongModal();
         this.setState(prevState => ({
