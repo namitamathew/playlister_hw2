@@ -622,7 +622,18 @@ class App extends React.Component {
         //var $this = $(ReactDOM.findDOMNode(this));
         this.refreshToolbars();
         // set el height and width etc.
-      }
+        document.addEventListener('keydown', (e) => {  
+            if ((e.metaKey || e.ctrlKey) && e.code === 'KeyZ') {
+                this.undo();
+            }  
+            if ((e.metaKey || e.ctrlKey) && e.code === 'KeyY') {
+                this.redo();
+            }
+        })
+
+            
+    }
+      
 
     render() {
         let canAddSong = this.state.currentList !== null;
